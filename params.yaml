@@ -1,0 +1,32 @@
+BASE :
+  project_name : Diabetes prediction using mlops
+  random_state : 42
+  target_column : diabetes
+
+data_source :
+  source_Data_location : source_data/pima_indian.csv
+
+load_data :
+  load_Data_location : data/raw/raw_Data.csv
+
+split_data :
+  train_Data_location : data/processed/train.csv
+  test_Data_location : data/processed/test.csv
+
+Algorithm:
+  LogisticRegression:
+    parameters:
+      penalty: 'l2'           # Common choice for regularization
+      C: 1.0                  # Default value, can be adjusted based on model performance
+      solver: 'lbfgs'         # Suitable for small to medium-sized datasets
+      max_iter: 100           # Increase if the model is not converging
+
+model_path : model
+
+MLflow_config:
+  remote_server_uri: 'http://127.0.0.1:5000'
+  storage_location: artifacts
+  experiment_title: LogisticRegression_Mlops
+  execution_name: mlops-diabetes
+  model_registry_name: LogisticRegression-diabetes-prediction
+
