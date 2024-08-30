@@ -1,4 +1,4 @@
-BASE :
+base:
   project_name : Diabetes prediction using mlops
   random_state : 42
   target_column : diabetes
@@ -30,3 +30,6 @@ MLflow_config:
   execution_name: mlops-diabetes
   model_registry_name: LogisticRegression-diabetes-prediction
 
+reports:
+   params: reports/params.json
+   scores: reports/scores.json
