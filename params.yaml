@@ -12,6 +12,7 @@ load_data :
 split_data :
   train_Data_location : data/processed/train.csv
   test_Data_location : data/processed/test.csv
+  test_size : 0.2
 
 Algorithm:
   LogisticRegression:
