@@ -6,3 +6,4 @@ matplotlib.pyplot
 seaborn
 dvc
 psycopg-binary
+mlflow

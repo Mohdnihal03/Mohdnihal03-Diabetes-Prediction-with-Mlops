@@ -1,7 +1,7 @@
 base:
   project_name : Diabetes prediction using mlops
   random_state : 42
-  target_column : diabetes
+  target_column : Outcome
 
 data_source :
   source_Data_location : source_data/pima_indian.csv
@@ -18,7 +18,7 @@ Algorithm:
   LogisticRegression:
     parameters:
       penalty: 'l2'           # Common choice for regularization
-      C: 1.0                  # Default value, can be adjusted based on model performance
+      C: 3.5                  # Default value, can be adjusted based on model performance
       solver: 'lbfgs'         # Suitable for small to medium-sized datasets
       max_iter: 100           # Increase if the model is not converging
 
