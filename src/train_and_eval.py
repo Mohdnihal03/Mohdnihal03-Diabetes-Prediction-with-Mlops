@@ -56,9 +56,24 @@ def train_and_eval(config_file_path):
             'Mean Squared Error':mse,
             'Mean Absolute Error':mae,
             'Accuracy of model':accuracy,
-            'Confusion matrix':conf_matrix,
+            # 'Confusion matrix':conf_matrix,
             'R2 score ': r2
         }
+        json.dump(scores, f, indent=4)
+
+
+    with open(params_file,'w') as file:
+        params = {
+            'penalty':penalty,
+            'C':C,
+            'solver':solver,
+            'max_iter': max_iter
+        }
+        json.dump(params, file, indent=4)
+
+    os.makedirs(model_dir,exist_ok=True)
+    model_path = os.path.join(model_dir,"LogisticRegressionModel.joblib")
+    joblib.dump(model,model_path)
 
 
 

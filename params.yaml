@@ -18,11 +18,11 @@ Algorithm:
   LogisticRegression:
     parameters:
       penalty: 'l2'           # Common choice for regularization
-      C: 3.5                  # Default value, can be adjusted based on model performance
-      solver: 'lbfgs'         # Suitable for small to medium-sized datasets
-      max_iter: 100           # Increase if the model is not converging
+      C: 10                 # Default value, can be adjusted based on model performance
+      solver: 'liblinear'         # Suitable for small to medium-sized datasets
+      max_iter: 200          # Increase if the model is not converging
 
-model_path : model
+model_path : models
 
 MLflow_config:
   remote_server_uri: 'http://127.0.0.1:5000'
