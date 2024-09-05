@@ -31,6 +31,6 @@ MLflow_config:
   execution_name: mlops-diabetes
   model_registry_name: LogisticRegression-diabetes-prediction
 
-reports:
-   params: reports/params.json
-   scores: reports/scores.json
+# reports:
+#    params: reports/params.json
+#    scores: reports/scores.json
