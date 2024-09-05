@@ -1,9 +1,11 @@
 Diabetes
 ==============================
 
-Diabetes Prediction using MLOps
-
+## Diabetes Prediction using MLOps
 Project Organization
+
+    - Let's understand how the project is Organized ->
+
 ------------
 
     ├── LICENSE
@@ -54,3 +56,7 @@ Project Organization
 
 --------
 
+### Connect me Through :
+ - **Email : 'mohd.nihalll03@gmail.com'**
+ - **Github : MohdNihal03**
+ - **LinkedIn : Mohammed Nihal**
