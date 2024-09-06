@@ -7,3 +7,5 @@ seaborn
 dvc
 psycopg-binary
 mlflow
+django
+urlparse

@@ -22,7 +22,7 @@ stages:
     deps:
       - src/train_and_eval.py
       - data/processed/train.csv
-      - data/processed/test.csv
+      - data/processed/test.cscv
     params:
       - Algorithm.LogisticRegression.parameters.penalty
       - Algorithm.LogisticRegression.parameters.C
