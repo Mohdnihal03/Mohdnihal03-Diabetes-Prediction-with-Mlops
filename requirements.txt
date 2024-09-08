@@ -2,8 +2,12 @@ pandas
 numpy
 scikit-learn
 ipykernel
-matplotlib
+matplotlib 
 seaborn
 dvc
 psycopg-binary
 mlflow
+django
+urlparse
+dagshub
+pytest
