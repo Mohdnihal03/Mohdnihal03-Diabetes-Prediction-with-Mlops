@@ -1,10 +1,14 @@
-# tests/test_train_and_eval.py
+
 
 import pytest
 import pandas as pd
 import json
 import os
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
+
 from src.train_and_eval import train_and_eval
+
 
 @pytest.fixture
 def mock_config_file():
