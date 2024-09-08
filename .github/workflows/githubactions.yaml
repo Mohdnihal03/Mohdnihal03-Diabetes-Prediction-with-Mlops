@@ -34,9 +34,10 @@ jobs:
         pip install -r requirements.txt
 
     # Step 4: Run tests (you can replace pytest with Django test command if needed)
+    # Step 4: Run tests
     - name: Run tests
       run: |
-        pytest  # Or use: python manage.py test if you're using Django's test suite
+        pytest Frontend/tests/
 
     # Step 5: Build Docker image
     - name: Build Docker image
