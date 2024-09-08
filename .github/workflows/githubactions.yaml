@@ -37,7 +37,7 @@ jobs:
     # Step 4: Run tests
     - name: Run tests
       run: |
-        pytest Frontend/tests/
+        pytest tests/
 
     # Step 5: Build Docker image
     - name: Build Docker image
