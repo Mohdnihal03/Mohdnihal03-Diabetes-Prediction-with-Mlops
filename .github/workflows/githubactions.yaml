@@ -32,6 +32,9 @@ jobs:
         pip install --upgrade pip
         pip install --upgrade setuptools
         pip install -r requirements.txt
+      
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV
 
     # Step 4: Run tests (you can replace pytest with Django test command if needed)
     # Step 4: Run tests
