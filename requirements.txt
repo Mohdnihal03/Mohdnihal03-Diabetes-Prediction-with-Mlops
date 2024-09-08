@@ -2,7 +2,7 @@ pandas
 numpy
 scikit-learn
 ipykernel
-matplotlib.pyplot 
+matplotlib 
 seaborn
 dvc
 psycopg-binary
@@ -10,3 +10,4 @@ mlflow
 django
 urlparse
 dagshub
+pytest
