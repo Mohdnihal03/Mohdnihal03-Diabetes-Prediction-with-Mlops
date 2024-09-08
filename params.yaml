@@ -17,15 +17,15 @@ split_data :
 Algorithm:
   LogisticRegression:
     parameters:
-      penalty: 'l2'           # Common choice for regularization
+      penalty: 'l1'           # Common choice for regularization
       C: 10                 # Default value, can be adjusted based on model performance
-      solver: 'liblinear'         # Suitable for small to medium-sized datasets
-      max_iter: 200          # Increase if the model is not converging
+      solver: 'saga'         # Suitable for small to medium-sized datasets
+      max_iter: 75          # Increase if the model is not converging
 
 model_path : models
 
 MLflow_config:
-  remote_server_uri: 'http://127.0.0.1:5000'
+  remote_server_uri: 'https://dagshub.com/mohammednihal9986/Mohdnihal03-Diabetes-Prediction-with-Mlops.mlflow'
   storage_location: artifacts
   experiment_title: LogisticRegression_Mlops
   execution_name: mlops-diabetes

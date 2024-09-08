@@ -1,0 +1,5 @@
+outs:
+- md5: be8e9ce47b206fe3807e562d95f3a548
+  size: 1009
+  hash: md5
+  path: DVC.yaml

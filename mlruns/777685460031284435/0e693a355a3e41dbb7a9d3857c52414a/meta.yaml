@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/777685460031284435/0e693a355a3e41dbb7a9d3857c52414a/artifacts
+end_time: 1725730925128
+entry_point_name: ''
+experiment_id: '777685460031284435'
+lifecycle_stage: active
+run_id: 0e693a355a3e41dbb7a9d3857c52414a
+run_name: mlops-diabetes
+run_uuid: 0e693a355a3e41dbb7a9d3857c52414a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1725730918134
+status: 3
+tags: []
+user_id: nihall
