@@ -8,8 +8,6 @@ import joblib
 import json
 import numpy as np
 import os 
-import yaml
-import mlflow
 from urllib.parse import urlparse # parse method from one file to another file
 
 def train_and_eval(config_file_path):
