@@ -1,63 +1,55 @@
 name: CI/CD Pipeline
 
-# Trigger the workflow on push and pull requests to the 'mlops_branch'
 on:
   push:
     branches:
-      - Mlops-diabetes  # Specify mlops_branch
+      - Mlops-diabetes
   pull_request:
     branches:
-      - Mlops-diabetes  # Specify mlops_branch
+      - Mlops-diabetes
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code from the correct branch (mlops_branch)
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        ref: Mlops-diabetes  # Ensure you're checking out the correct branch
+        ref: Mlops-diabetes
 
-    # Step 2: Set up Python
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
         python-version: '3.9'
 
-    # Step 3: Install dependencies (ensure Django, pytest, and other packages are included in requirements.txt)
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        pip install --upgrade pip setuptools
         pip install -r requirements.txt
 
-    # Step 4: Run tests (you can replace pytest with Django test command if needed)
-    # Step 4: Run tests
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$(pwd)/src" >> $GITHUB_ENV
+
     - name: Run tests
       run: |
         pytest tests/
 
-    # Step 5: Build Docker image
     - name: Build Docker image
       run: |
         docker build -t myapp .
 
-    # Step 6: Log in to Docker Hub
     - name: Log in to Docker Hub
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    # Step 7: Push Docker image to Docker Hub
     - name: Push Docker image to Docker Hub
       run: |
         docker tag myapp myregistry/myapp:latest
         docker push myregistry/myapp:latest
 
-    # Step 8: Deploy to the server
     - name: Deploy to Server
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
