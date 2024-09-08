@@ -7,7 +7,7 @@ seaborn
 psycopg-binary
 mlflow
 django
-urlparse
+urlparse4
 dagshub
 pytest
 dvc
